@@ -1,8 +1,10 @@
+require('dotenv').config()
 
 module.exports = {
-  /*
-  ** Headers of the page
-  */
+  env: {
+    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY
+  },
+  mode: 'spa',
   head: {
     title: 'cws-wedding',
     meta: [
@@ -12,12 +14,13 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Great+Vibes|Lora|Material+Icons' }
     ]
   },
   plugins: ['~/plugins/vuetify.js'],
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/assets/style/font.styl'
   ],
   /*
   ** Customize the progress bar color
