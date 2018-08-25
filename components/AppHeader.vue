@@ -4,7 +4,7 @@
     <div class="display-1 brideGroom" id="ampersand">&</div>
     <div class="display-2 brideGroom" id="valerie">Valerie</div>
     <!-- <hr class="separator"> -->
-    <div class="date">25 Sept 2018</div>
+    <div class="date">29 Sept 2018</div>
   </v-flex>
 </template>
 
