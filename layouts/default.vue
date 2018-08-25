@@ -16,7 +16,7 @@
 
 .fullContainer {
   height: 100%;
-  background: url('~/assets/images/table-number.png') no-repeat center center fixed;
+  background: url('~/assets/images/table-number.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
