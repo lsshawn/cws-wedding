@@ -23,21 +23,15 @@ export default {
 }
 
 .tableTitle {
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   font-size: 1.5em;
   color: #666;
-  position: absolute;
-  margin: 20px 0;
-  width: 100%;
 }
 
 .tableNo {
   font-family: "Great Vibes";
-  font-size: 10em;
+  font-size: 8em;
   color: #666;
   vertical-align: text-top;
-  position: absolute;
-  width: 100%;
-  /* margin: 0 50px 0 0; */
 }
 </style>
