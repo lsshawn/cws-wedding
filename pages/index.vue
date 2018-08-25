@@ -11,6 +11,7 @@
         persistent-hint
         v-model="person"
         :items="names"
+        class="nameInput"
         >
           <v-slide-x-reverse-transition
             slot="append-outer"
@@ -120,6 +121,13 @@ export default {
   background-color: #5f7872 !important;
 }
 
+.nameInput {
+  font-size: 20px !important;
+}
+
+a.v-list__tile.v-list__tile--link {
+  font-size: 20px !important;
+}
 .mainContent {
   margin-top: 30px;
 }
