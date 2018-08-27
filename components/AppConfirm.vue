@@ -21,7 +21,7 @@ export default {
 .welcome {
   /* font-style: italic; */
   font-family: "Great Vibes";
-  color: #777;
+  color: #777 ;
 }
 
 .tableTitle {
@@ -36,10 +36,10 @@ export default {
 }
 
 .tableNo {
-  font-family: "Great Vibes";
+  /* font-family: "Great Vibes"; */
   font-size: 180px;
   color: #444;
   vertical-align: text-top;
-  line-height: 80%;
+  line-height: 100%;
 }
 </style>
