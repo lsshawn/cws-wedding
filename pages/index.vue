@@ -99,16 +99,31 @@ export default {
   },
   async beforeMount () {
     try {
-      const res = await axios.get(url, airtableConfigs)
-      if (res) {
-        this.data = res.data.records
-        this.names = this.data.reduce((arr, item) => {
-          if (item.fields.Name) {
-            arr.push(item.fields.Name)
-          }
-          return arr
-        }, [])
+      let _data = []
+
+      let getData = async (offset) => {
+        let nextUrl = offset === undefined ? url : url + `?offset=${offset}`
+        // console.log(nextUrl)
+        let res = await axios.get(nextUrl, airtableConfigs)
+        if (res) {
+          // console.log(res.data.records)
+          _data = _data.concat(res.data.records)
+        }
+
+        if (res.data.offset) {
+          await getData(res.data.offset)
+        }
       }
+
+      await getData()
+
+      this.data = _data
+      this.names = this.data.reduce((arr, item) => {
+        if (item.fields.Name) {
+          arr.push(item.fields.Name)
+        }
+        return arr
+      }, [])
     } catch (err) {
       console.log(err)
     }
